@@ -1,0 +1,17 @@
+<form ng-submit="Login.login()">
+    <div class="form-group" ng-class="{'has-error': Login.model.errorUsername.length !== 0}">
+        <label for="username">Username :</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="Login.model.username" ng-blur="Login.model.errorUsername = ''; Login.model.errorMessage = '';">
+        <div class="alert alert-danger" ng-show="Login.model.errorUsername.length !== 0">
+            {{Login.model.errorUsername}}
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error': Login.model.errorPassword.length !== 0}">
+        <label for="password">Password :</label>
+        <input type="password" class="form-control" id="password" ng-model="Login.model.password" ng-blur="Login.model.errorPassword = ''; Login.model.errorMessage = '';">
+        <div class="alert alert-danger" ng-show="Login.model.errorPassword.length !== 0">
+            {{Login.model.errorPassword}}
+        </div>
+    </div>
+    <div class="alert alert-danger" ng-show="Login.model.errorMessage.length !== 0">
+        {{Login.model.errorMessage}}

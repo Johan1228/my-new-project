@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on 2016-10-07
 
-module.exports = function(config) {
+module.exports = function (config) {
   'use strict';
 
   config.set({
@@ -38,8 +38,7 @@ module.exports = function(config) {
     ],
 
     // list of files / patterns to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     // web server port
     port: 8080,
@@ -56,11 +55,6 @@ module.exports = function(config) {
       'PhantomJS'
     ],
 
-    // Which plugins to enable
-    plugins: [
-      'karma-phantomjs-launcher',
-      'karma-jasmine'
-    ],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
@@ -78,22 +72,22 @@ module.exports = function(config) {
     // },
     // URL root prevent conflicts with the site root
     // urlRoot: '_karma_'
-    
+
     plugins: [
-    "karma-coverage",
-    "karma-phantomjs-launcher",
-    'karma-chrome-launcher',
-    //'karma-firefox-launcher',
-    "karma-jasmine"
-],
+      "karma-coverage",
+      "karma-phantomjs-launcher",
+      'karma-chrome-launcher',
+      //'karma-firefox-launcher',
+      "karma-jasmine"
+    ],
 
-reporters: ['progress', 'coverage'],
+    reporters: ['progress', 'coverage'],
 
-coverageReporter: {
-    reporters: [
+    coverageReporter: {
+      reporters: [
         {type: 'lcov', dir: 'coverage/'},
         {type: 'cobertura', dir: 'coverage/', file: 'cobertura.xml'}
-    ]
-},
+      ]
+    },
   });
 };

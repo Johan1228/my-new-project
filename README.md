@@ -18,3 +18,4 @@ https://codeclimate.com/github/Johan1228/my-new-project
 ## Travis
 
 https://travis-ci.org/TangentSolutions/Angular-Tutorial-Justice
+
